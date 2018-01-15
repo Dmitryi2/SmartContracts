@@ -1,0 +1,1207 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+     <title>Jetcash.ru</title>
+    <meta name="description" content="Это космос детка! Хочешь испытать удачу и удвоить свои средства вместе с JetCash? Это шанс для тебя!" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="jet cash, jetcash, джет кеш, опкеш, vs cash, бесплатный кейс, кейс деньги сайт кейс, кейс открытие, case money, must cash, op cash, opcash, опкеш, coinscube" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fonts.min.css" />
+    <link rel="stylesheet" href="/assets/css/core.min.css?v=12222212122322" />
+	<link rel="stylesheet" href="/assets/css/style1.css" />
+	 <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css?v=1222222222222222222222222222222222222222222222222222222331222222222" />
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/assets/js/base.js?v=1"></script>
+	<script type="text/javascript" src="/assets/js/core.min.js"></script>
+    <script type="text/javascript" src="/assets/js/socket.io.js"></script>
+    	<script src="/assets/js/jquery.arcticmodal-0.3.min.js">
+      </script><link rel="stylesheet" href="/assets/js/jquery.arcticmodal-0.3.css">
+    <script src="https://use.fontawesome.com/2a0e9a11cb.js"></script>
+    <script>
+        var login = 41693;
+    var time = 28799;
+    
+    </script>
+        <script type="text/javascript" src="/assets/js/functions.min.js?v=12222322112222222222222222122231213"></script>
+</head>
+ 
+<body>
+  <div class="owerlay"></div>
+
+    <div class="wrapper" style="    margin-bottom: 200px;">
+        <header>
+            <div class="logo">
+                <a href="/"><img src="/assets/images/logo.png" width="150">
+                </a>
+                <div class="sound"><i class="flaticon-sound-on on"></i>
+                </div>
+            </div>
+            <div class="mob_menu_button"></div>
+                            <div class="mob_menu">
+              	<div class="logo">
+              		<div class="logo-img"></div>
+              		<div class="clearfix"></div>
+              	</div>
+              	<!--<div class="auth2">
+              					<span class="user"><small>Добро пожаловать, </small><br><a href="#" class="nickname" id="asas">Сафонов Дима</a></span>
+              			<form style="display:none;" class="nickname_form">
+              				<input type="text" class="nickname" value="Сафонов Дима">
+              				<a href="#" class="save"><i class="fa fa-check" aria-hidden="true"></i></a>
+              				<a href="#" class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
+              			</form>
+              			<a class="logout" href="/logout">ВЫЙТИ</a>
+              			</div>-->
+            </div>
+              <div class="balance-unite">
+              <div class="balance">
+                  <div class="v">
+                    0 <i class="flaticon-ruble"></i>
+                  </div>
+              </div>
+              <div class="deposit">
+                  <button>ДЕПОЗИТ</button>
+              </div>
+              <div class="withdrawal">
+                  <button>ВЫВОД</button>
+              </div>
+			  
+              <div class="cls"></div>
+            </div>
+                                      <div class="signin">
+              <div class="welcome">
+                <div class="name-show">Добро пожаловать,<br> <a href="#">Сафонов Дима</a></div
+                  ><div class="name-edit">
+                    <input type="text" value="Сафонов Дима">
+                    <div class="x-icon eas">
+                    </div>
+                    <div class="save-username flaticon-check eas"></div>
+                  </div>
+                  <div class="error"></div>
+                </div>
+                <div class="settings">
+                  <i class="flaticon-settings"></i>
+                </div><div class="cls">
+                </div>
+            </div>
+                    </header>
+        <!-- .wrapper -->
+        <div class="middle">
+            <div class="history">
+                <div class="stats">
+                    <div class="played"><i class="odometr ptotalcount_i" id="st-games">0</i>
+                        <div>ИГР СЫГРАНО</div>
+                    </div>
+                    <div class="sep"></div>
+                    <div class="wag" ><i class="odometr ptotalamount_i" id="st-total">0</i>
+                        <div>ПОСТАВЛЕНО. (<i class="flaticon-ruble"></i>)</div>
+                    </div>
+                    <div class="cls"></div>
+                </div>
+                <div class="tabs">
+                    <ul>
+                        <li class="active" data-id="h-recent">ВСЕ ИГРЫ</li>
+                        <li data-id="h-plays">МОИ ИГРЫ</li>
+                        <li data-id="h-wins">ВЫИГРЫШИ</li>
+                    </ul>
+                    <div class="cls"></div>
+                    <div class="table-h" data-id="h-recent-top">
+                        <div class="f1">ИГРОК</div>
+                        <div class="f2">СТАВКА</div>
+                        <div class="f3">ПРОФИТ</div>
+                        <div class="f4">ШАГ</div>
+                        <div class="cls"></div>
+                    </div>
+                    <div class="table-h hide" data-id="h-plays-top">
+                        <div class="f1">ДАТА</div>
+                        <div class="f2">СТАВКА</div>
+                        <div class="f3">ПРОФИТ</div>
+                        <div class="f4">ШАГ</div>
+                        <div class="cls"></div>
+                    </div>
+                    <div class="table-h hide" data-id="h-wins-top">
+                        <div class="f1">ИГРОК</div>
+                        <div class="f2">СТАВКА</div>
+                        <div class="f3">ПРОФИТ</div>
+                        <div class="f4">ШАГ</div>
+                        <div class="cls"></div>
+                    </div>
+                </div>
+                <template id="big-template">
+                  <div>
+                    <div class="list"  v-for="histor in big">
+                        <div class="player">{{histor.nick}}</div>
+                        <div class="bet">{{ histor.bet }} <i class="flaticon-ruble"></i>
+                        </div>
+                        <div class="profit win">{{ histor.profit }} <i class="flaticon-ruble"></i>
+                        </div>
+                        <div class="step">{{ histor.level }}</div>
+                        <div class="difficult"><img v-bind:src="'/assets/images/'+ histor.mode +'-mode.svg'" />
+                        </div>
+                    </div>
+                    <div class="cls"></div>
+                  </div>
+                </template>
+                <template id="history-template">
+                  <div>
+                    <div class="list"  v-for="histor in history">
+                        <div class="player">{{histor.nick}}</div>
+                        <div class="bet">{{histor.bet}} <i class="flaticon-ruble"></i>
+                        </div>
+                        <div class="profit" v-if="histor.profit > 0" style="font-weight: bold;color: #eff464;">
+                          {{histor.profit}}
+                          <i class="flaticon-ruble"></i>
+                        </div>
+                        <div class="profit" v-if="histor.profit <= 0">
+                          {{histor.profit}}
+                          <i class="flaticon-ruble"></i>
+                        </div>
+                        <div class="step">{{histor.level}}</div>
+                        <div class="difficult">
+                          <img v-bind:src="'/assets/images/' + histor.mode + '-mode.svg'" />
+                        </div>
+                    </div>
+                  </div>
+                </template>
+
+                <div class="table-list">
+                    <div class="recent-l" id="afk" data-id="h-recent-t" style="width: 95%;
+    background: red;
+    background: rgba(17,23,38,.7);
+    float: left;
+    padding: 10px;">
+                      <history></history>
+                    </div>
+                    <div class="recent-l hide" id="afk2" data-id="h-plays-t" style="width: 95%;
+    background: red;
+    background: rgba(17,23,38,.7);
+    float: left;
+    padding: 10px;">
+                                                                  <div class="list" >
+                          <div class="player">2018-01-15 05:27:10</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2018-01-05 12:50:44</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2018-01-03 15:08:56</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2017-12-27 15:31:15</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">2</div>
+                          <div class="difficult">
+                            <img src="/assets/images/medium-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2017-12-27 15:30:27</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/medium-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2017-12-27 15:30:02</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        <span style="font-weight: bold; color: #eff464;">10
+                            <i class="flaticon-ruble"></i></span>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/medium-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2017-12-24 09:05:45</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">2</div>
+                          <div class="difficult">
+                            <img src="/assets/images/medium-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2017-12-24 09:04:56</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/medium-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2017-12-24 09:04:17</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        <span style="font-weight: bold; color: #eff464;">10
+                            <i class="flaticon-ruble"></i></span>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/medium-mode.svg" />
+                          </div>
+                      </div>
+                                            <div class="list" >
+                          <div class="player">2017-12-24 09:03:29</div>
+                          <div class="bet">5 <i class="flaticon-ruble"></i></div>
+                          <div class="profit">
+                                                        0
+                            <i class="flaticon-ruble"></i>
+                                                      </div>
+                          <div class="step">1</div>
+                          <div class="difficult">
+                            <img src="/assets/images/hard-mode.svg" />
+                          </div>
+                      </div>
+                                                                </div>
+                    <div class="recent-l hide" id="big" data-id="h-wins-t" style="width: 95%;
+    background: red;
+    background: rgba(17,23,38,.7);
+    float: left;
+    display: none;">
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">50 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">145 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">1</div>
+                          <div class="difficult"><img src="/assets/images/hard-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">100 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">220 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">2</div>
+                          <div class="difficult"><img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">100 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">220 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">2</div>
+                          <div class="difficult"><img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">15 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">108 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">5</div>
+                          <div class="difficult"><img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">15 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">161 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">6</div>
+                          <div class="difficult"><img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">15 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">108 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">5</div>
+                          <div class="difficult"><img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">40 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">116 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">1</div>
+                          <div class="difficult"><img src="/assets/images/hard-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">40 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">116 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">1</div>
+                          <div class="difficult"><img src="/assets/images/hard-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">50 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">160 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">3</div>
+                          <div class="difficult"><img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+
+                                            <div class="list">
+                          <div class="player"></div>
+                          <div class="bet">50 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="profit win">110 <i class="flaticon-ruble"></i>
+                          </div>
+                          <div class="step">2</div>
+                          <div class="difficult"><img src="/assets/images/easy-mode.svg" />
+                          </div>
+                      </div>
+
+                                          </div>
+                </div>
+            </div>
+            <!-- .history -->
+            <div class="game">
+              <div class="a" style="background: transparent;">
+                <!--<div class="obj1"></div>
+                <div class="obj3"></div>
+                <div class="obj4"></div>
+                <div class="obj6"></div>
+                <div class="obj7"></div>-->
+              </div>
+                <div class="users_online">Online: <span id="st-online">-</span>
+                </div>
+                <div class="loading game-pane-load" style="display: block;"></div>
+                <div class="tooltip_demo eas">Демо</div>
+                <div class="demo-play">
+                    <div class="tooltip close eas">
+                        <div class="x-icon eas"></div>
+                    </div>
+                    <div style="height:135px;"></div>
+                    <div class="play-demo btn eas">Играть демо</div>
+                    <div class="deposit-demo btn eas">Депозит</div>
+                    <div class="or">или</div>
+                    <div class="free-demo btn eas">Бесплатные рубли</div>
+                </div>
+                <div class="arrow-step-left"><i class="flaticon-arr-right"></i>
+                </div>
+                <div class="arrow-step-right"><i class="flaticon-arr-left"></i>
+                </div>
+                <ul class="list"></ul>
+                <div class="cls"></div>
+                <div class="g-bottom">
+                  <div class="play-btn play-start">
+                      <div class="loading"></div>Играть</div>
+                    <div class="control en">
+						<span class="minus-icon">-</span>
+                        <input type="text" class="betInp" value="₽15" maxlength="11"> <span class="plus-icon">+</span>
+                    </div>
+                    <div class="control-active">0.00₽</div>
+                    <div class="play-btn game-end">Закончить</div>
+                    <div class="cls"></div>
+                </div>
+                <div class="game-type bottom">
+                    <ul>
+                        <li data-url="easy" class="iteasy"><img src="/assets/images/easy-mode.svg" />
+                            <div>ЛЕГКАЯ</div>
+                        </li>
+                        <li data-url="medium" class="itmedium"><img src="/assets/images/medium-mode.svg" />
+                            <div>СРЕДНЯЯ</div>
+                        </li>
+                        <li data-url="hard" class="ithard"><img src="/assets/images/hard-mode.svg" />
+                            <div>СЛОЖНАЯ</div>
+                        </li>
+                    </ul>
+                    <div class="cls"></div>
+                    <div class="verify">
+                      <span class="s"><i class="fa fa-ticket" aria-hidden="true"></i> Проверить билет</span>
+                      <span class="h"><i class="fa fa-ticket" aria-hidden="true"></i> Проверить билет</span>
+                    </div>
+                </div>
+				
+            </div>
+            <!-- .game -->
+          <div class="wagered">
+				<div class="table-h-block">
+				<div class="table-header">
+				<div class="title">
+				<i class="flaticon-winner"></i> Стена героев
+				</div>
+
+</div>
+				<div class="cls"></div>
+			
+                    <div class="tabs">
+                        <ul>
+                            <li class="active" data-id="w-wagered">По сумме ставок </li>
+                            <li data-id="w-played">По играм</li>
+                        </ul>
+                        <div class="cls"></div>
+                    </div>
+                    <div class="table-h" data-id="w-wagered-top">
+						<div class="f1">Место</div>
+						<div class="f2">Игрок</div>
+						<div class="f3">Сумма ставок</div>
+						<div class="cls"></div>
+					</div>
+                    <div class="table-h hide" data-id="w-played-top">
+						<div class="f1">Место</div>
+						<div class="f2">Игрок</div>
+						<div class="f3">Игр сыграно</div>
+						<div class="cls"></div>
+					</div>
+                </div>
+                <div class="table-list">
+                    <div class="recent-l" data-id="w-wagered-t" style="    width: 91%;
+    float: right;
+    padding: 18px;
+    background: rgba(17,23,38,.7);">
+                        <div class="tldate today" id="afk4">
+                                                                                  <div class="list">
+                              <div class="number">
+                                  <div>1</div>
+                              </div>
+                                <div class="player">Алексеев Данил </div>
+                                <div class="win">17593 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>2</div>
+                              </div>
+                                <div class="player">Алексеев Дмитрий </div>
+                                <div class="win">16320 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>3</div>
+                              </div>
+                                <div class="player">Висмурадов Рамзан </div>
+                                <div class="win">16236 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>4</div>
+                              </div>
+                                <div class="player">Васильев Илья </div>
+                                <div class="win">8220 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>5</div>
+                              </div>
+                                <div class="player">Зенин Костя </div>
+                                <div class="win">7900 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>6</div>
+                              </div>
+                                <div class="player">Killer Evan </div>
+                                <div class="win">7447 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>7</div>
+                              </div>
+                                <div class="player">Капустин Даниил </div>
+                                <div class="win">7398 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>8</div>
+                              </div>
+                                <div class="player">Тришин Богдан </div>
+                                <div class="win">6905 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>9</div>
+                              </div>
+                                <div class="player">Павлов Максим </div>
+                                <div class="win">6137 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                        <div class="list">
+                              <div class="number">
+                                  <div>10</div>
+                              </div>
+                                <div class="player">Шмелёв Михаил </div>
+                                <div class="win">5871 <i class="flaticon-ruble"></i>
+                                </div>
+                            </div>
+                                                                              </div>
+                   </div>
+                    <div class="recent-l hide" data-id="w-played-t">
+                        <div class="tldate today" id="afk3" style="    width: 95%;
+    float: right;
+    padding: 18px;
+    background: rgba(17,23,38,.7);">
+                                                    <div class="list">
+                            <div class="number">
+                              <div>1</div>
+                            </div>
+                              <div class="player">Капустин Даниил </div>
+                              <div class="win">1172
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>2</div>
+                            </div>
+                              <div class="player">Killer Evan </div>
+                              <div class="win">1066
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>3</div>
+                            </div>
+                              <div class="player">Uchaev Mikhail </div>
+                              <div class="win">743
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>4</div>
+                            </div>
+                              <div class="player">Загидуллин Данил </div>
+                              <div class="win">623
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>5</div>
+                            </div>
+                              <div class="player">Алексеев Дмитрий </div>
+                              <div class="win">584
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>6</div>
+                            </div>
+                              <div class="player">Павлов Максим </div>
+                              <div class="win">578
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>7</div>
+                            </div>
+                              <div class="player">Шавель Артём </div>
+                              <div class="win">564
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>8</div>
+                            </div>
+                              <div class="player">Мирный Егор </div>
+                              <div class="win">452
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>9</div>
+                            </div>
+                              <div class="player">Оркин Павел </div>
+                              <div class="win">422
+                              </div>
+                          </div>
+                                                    <div class="list">
+                            <div class="number">
+                              <div>10</div>
+                            </div>
+                              <div class="player">Wolfendrgood Misha </div>
+                              <div class="win">405
+                              </div>
+                          </div>
+                                                  </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cls"></div>
+            <!-- .wagered -->
+            <div class="verify-b">
+                <div class="current">
+                    <div class="title">Current Ticket</div>
+                    <div class="hash">Hash
+                        <div class="textarea">
+                            <textarea readonly>Game not started!</textarea>
+                        </div>
+                    </div>
+                    <div class="number">Number
+                        <div class="textarea">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="cls"></div>
+                    <div class="server-seed">Server Seed
+                        <div class="textarea">
+                            <textarea readonly></textarea>
+                        </div>
+                    </div>
+                    <div class="client-seed">Client Seed
+                        <div class="textarea">
+                            <textarea readonly>Скоро</textarea>
+                        </div>
+                    </div>
+                    <div class="result">Result
+                        <div class="textarea">
+                            <textarea readonly>Verified</textarea>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button class="verify-result">Verify</button>
+                    </div>
+                    <div class="cls"></div>
+                </div>
+                <div class="next">
+                    <div class="title">Next Ticket</div>
+                    <div class="hash">Hash
+                        <div class="textarea">
+                            <textarea readonly>Скоро</textarea>
+                        </div>
+                    </div>
+                    <div class="cls"></div>
+                    <div class="client-seed">Client Seed
+                        <div class="textarea">
+                            <textarea readonly>Скоро</textarea>
+                        </div>
+                    </div>
+                    <div class="cls"></div>
+                </div>
+                <div class="cls"></div>
+            </div>
+            <!-- .verify -->
+        </div>
+        <!-- .middle -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+		<br><br><div class="siteorigin-widget-tinymce textwidget">
+	<p style="text-align: center;"><span class="su-highlight" style="background:#ddff99;color:#000000">&nbsp;В случае <strong>блокировки</strong> сайта используйте бесплатные VPN расширения в браузере: <span style="text-decoration: underline; color: #ff6600;"><strong><a style="color: #ff6600; text-decoration: underline;" href="https://chrome.google.com/webstore/detail/browsec-vpn-privacy-and-s/omghfjlpggmjjaagoclmmobgdodcjboh?utm_source=chrome-ntp-icon" target="_blank" rel="nofollow">Chrome</a></strong></span> или <span style="text-decoration: underline; color: #ff0000;"><strong><a style="color: #ff0000; text-decoration: underline;" href="https://addons.opera.com/ru/extensions/details/browsec/?display=en" target="_blank" rel="nofollow">Opera</a></strong></span>&nbsp;</span></p>
+		<p style="text-align: center;"><span class="su-highlight" style="background:#ddff99;color:#000000">Для смартфонов и планшетов с OC <span style="text-decoration: underline; color: #ff6600;"><strong><a style="color: #ff6600; text-decoration: underline;" href="https://play.google.com/store/apps/details?id=free.vpn.unblock.proxy.vpnmaster" target="_blank" rel="nofollow">Андроид</a></strong></span> 
+<br><br><br><br><br><br><center><p><p><div class="banner">
+<div class="monster"></div>
+<div class="banner_text">
+<span class="banner_top"><a href="#">Посетите наш новый проект</a></span>
+<span class="banner_site"><a href="http://runbox.pro/">RUNBOX.PRO</a></span>
+<span class="banner_info">Кейсы<br> на реальные вещи Ranbox</span>
+<a href="http://runbox.pro/" class="banner_more">Подробнее</a></center>
+</div>
+</div>
+
+</div>
+
+    </div>
+   <div class="footer">
+	<div class="inner">
+		<div class="block1">
+		<div class="logo"><img src="/assets/images/logo-footer@2x.png" width="150"></div>
+		<div class="text">Это космос детка!<br>Хочешь испытать удачу и удвоить свои средства<br>вместе с JetCash? Это шанс для тебя!</div>
+		</div>
+		<div class="block2">
+		<div class="title">Меню</div>
+		<ul class="staticUIa">
+		<li><a class="about" href="javascript:aboutUI();">О нас</a></li>
+		<li><a class="affilate" href="javascript:affilateUI();">Рефералы</a></li>
+		<li><a href="
+		/support/?act=new
+		">Поддержка</a></li>
+		</ul>
+		</div>
+		<div class="block3 lang-ui">
+		<div class="title">Язык</div>
+		<div class="lang-active"><span>Русский</span> <i class="flaticon-arr-down"></i></div>
+		<div class="langs">
+		<ul>
+		<li data-url="en">English</li>
+		<li data-url="ru">Русский</li>
+		</ul>
+		</div>
+		</div>
+		<div class="block4">
+		<div class="invite-friend ru">
+		<div class="icon"><i class="flaticon-users"></i></div>
+		<div class="title">Пригласи друзей и <i>заработай больше</i> <div class="desc">Получите 10% от каждого пополнение реферала</div></div>
+		<div class="cls"></div>
+		</div>
+		<div class="free-money">
+		<div class="icon"><i class="flaticon-money"></i></div>
+		<div class="title">Получить бесплатные деньги <div class="desc">Ты можешь получать 5.00 ₽ каждый день</div></div>
+		<div class="cls"></div>
+		</div>
+		</div>
+		<div class="cls"></div>
+		<div class="copyright">
+		<div style="position:absolute;"><a href="//www.free-kassa.ru/" target="_blank"><img src="//www.free-kassa.ru/img/fk_btn/6.png" width="95"></a></div>
+		<div class="terms"><a href="javascript:terms_show();" >пользовательское соглашение</a></div>
+		<div class="powered" style="margin-left:105px;">© 2017 jetcash.space<br> Все права защищены.</div>
+		<div class="agree-18"><i>18+</i> Если вам нет 18 лет, немедленно покиньте сайт</div>
+		</div>
+		<div class="cls"></div>
+		</div>
+	</div>
+    </footer>
+	
+	
+    <!-- .footer -->
+    <!-- popupUI -->
+
+          <div class="freemoneyUI">
+    <a href="#close" class="sb-close-btn"><div class="close-icon eas"></div></a>
+    <div class="title">ПОЛУЧИТЬ БОНУС</div>
+    <div class="desc">Вы можете получить бесплатно 5,00 ₽ каждые 24 часа</div>
+    <div class="get-m">
+                      <div class="fname">ПОЛУЧИТЬ БОНУС </div>
+        <div class="fvalue" id="timer"></div>
+                  </div>
+    <div class="pix"></div>
+          
+                </div>
+          
+    
+
+
+
+    <div class="aboutUI">
+        <a href="#close" class="sb-close-btn">
+            <div class="close-icon eas"></div>
+        </a>
+        <div class="title">About</div>
+        <div class="text"><p><strong>Многоступенчатая мини-игра от Jetcash.Space</strong> это способ испытать свою удачу и взобраться на лестницу славы стремительно. При помощи детально проработанной системы проекта, Вам это сделать можно будет. Нами разработана честная игра, которая способна моментами заставить Вас нервничать, но и даст возможность разбогатеть с нескольких десятков рублей. </p>
+            <br />
+            <br /> <p>По поводу честности игры - можно быть полностью спокойным, ведь используется хэш напрямую со сторонних источников и сервисов. Выигрыш уже известен системе после нажатия на кнопку "Старт", всё, что может сопутствовать Вам - это удача. А это значит, что здесь на 100% можно сыграть в честную, практически беспроигрышную игру. Проверьте самостоятельно. </p>
+            <br />
+            <br /> <p>Если вы разбираетесь в формулах, то работа системы <strong>jetcash.space</strong> использует следующую: Hash = SHA256(SHA256(Number + '-' + Server Seed). Ниже можно будет проверить хэш. Перед началом игры обязательно сделайте это, чтобы убедиться в честности сервиса. </p>
+            <br />
+            <br /> <p>Игра в JetCash.Space - это возможность стать богатым быстро. Рассказывайте друзьям о своих победах, расскажи девушке, сколько ты выигрываешь в день, либо честно признайся, что проиграл очередную зарплату! Лучше всего без фанатизма относиться к игре и остановиться на чем-то среднем. Главное - это получить удовольствие от игр. </p>
+            <br />
+            <br /><p>Перед началом попробуйте бесплатную ДЕМО-версию мини-игры от JetCash, чтобы изначально проверить сколько раз из 10, Вам может попасться выигрыш. </p>
+            <br />
+            <h3>Контакты</h3> У Вас есть вопросы? Наши контакты: E-Mail: 
+            <br /> Email: <a href="mailto:JetCash.Space@mail.ru">JetCash.Space@mail.ru</a>
+        </div>
+    </div>
+    <div class="termsUI">
+        <a href="#close" class="sb-close-btn">
+            <div class="close-icon eas"></div>
+        </a>
+        <div class="title">Правила</div>
+        <div class="text">
+            <h3>1. ОБЩИЕ ПОЛОЖЕНИЯ И ТЕРМИНЫ</h3> 1.1. Данный документ является договором на использование jetcash.space. Ниже приведены правила и условия использования Сервиса. Пожалуйста, внимательно ознакомьтесь с ними.
+            <br /> 1.2. Сервисом могут пользоваться пользователи достигшие 18-ти летия.
+            <br /> 1.3. Игра "jetcash.space" - беспроигрышная онлайн игра принадлежащяя организатору и находящиейся по адресу в сети интерет http://jetcash.space. Организатором предоставляются услуги пользователю по организацию его развлечения, досуга и отдыха.
+            <br /> 1.4 Организаторы беспроигрышной онлайн игры jetcash.space никого насильно не заставляют проводить свой досуг на этом проекте.
+            <br />
+            <h3>2. УЧЕТНАЯ ЗАПИСЬ, ПАРОЛЬ, БЕЗОПАСНОСТЬ</h3> Для открытия Учетной Записи пользователь должен авторизоваться через Вконтакте.
+            <br /> Пользователь несет полную ответственность за хранение конфиденциальной информации, за потерю доступа к своей Учетной Записи.
+            <br /> Кроме того, пользователь несет полную ответственность за любые совершенные им действия.
+            <br /> Сервис не несет ответственности за поступки, совершенные Пользователем в отношении третьих лиц.
+            <br /> Пользователь обязуется сообщить Сервису о любом несанкционированном использовании его Учетной записи.
+            <br />
+            <h3>3. КОНФИДЕНЦИАЛЬНОСТЬ</h3> Сервис обязуется не редактировать и не раскрывать любую конфиденциальную информацию, предоставленную Пользователем Сервису.
+            <br /> Сервис также обязуется хранить личный пароль пользователя в зашифрованном виде.
+            <br /> Личные данные могут быть предоставлены третьим лицам лишь в связи с нарушением законодательства, а также оскорблением или клеветой в отношении брендов или торговых марок третьих лиц.
+            <br />
+            <h3>4. ПОЛЬЗОВАТЕЛЬ</h3> Сервис оставляет за собой право в любой момент блокировать Пользователя в связи с нарушением правил использования Сервиса или законодательства.
+            <br /> Неприемлемы попытки несанкционированного доступа, попытки нанесения вреда Сервису.
+            <br /> При добавлении на сайт любой информации, запрещены оскорбления, вымогательства, клевета, блеф, сообщения, содержащие вредоносную информацию (в т.ч. вирусы, трояны, черви и т.п.), а также информация, способная нанести вред третьим лицам.
+            <br />
+            <h3>5. ЗАПРЕЩЕНО</h3> 5.1 Запрещается публиковать фальсифицированные данные
+            <br /> 5.2 Запрещается передача любых материалов, которые могут нарушить интеллектуальную собственность третьих лиц
+            <br /> 5.3 Запрещаются фальшивые публикации информации с целью получения несанкционированных доступов к информации или данным третьих лиц
+            <br /> 5.4 Запрещается публикация информации религиозного и политического характера
+            <br /> 5.5 Запрещается регистрировать более одной Учетной Записи.
+			<br /> <span style="color:#cc0000">5.5.1 Запрещается делать запросы на вывод средств на один и тот же кошелек с разных аккунтов, в случае обнаружения мультиаккаунтов предусматривается только 1 вывод на этот кошелек.  В случае повтора нарушения, бан всех аккаунтов.</span>
+            <br /> 5.6 Запрещается передавать данные для доступа к Учетной записи третьим лицам
+            <br /> 5.7 Запрещается оскорблять, обзывать, ставить под сомнение профессиональную квалификацию и добросовестность физических и юридических лиц, в том числе Пользователей Сервиса и Администрации Сервиса.
+            <br /> 5.8 Запрещается выбирать себе аватары, содержащие сцены насилия, угрозы, сквернословия, разврат (порнография), дискриминация в любых проявлениях, коммерческая реклама и рекламные тексты
+            <br />
+            <h3>6. ОТВЕТСТВЕННОСТЬ СТОРОН</h3> 6.1 Пополняя баланс на сайте любыми платежными системами, вы берете на себя полную ответственность за ваши действия. Сервис никак не принуждает и не настаивает делать какие либо действия.
+            <br /> 6.2 Открывая кейс или тратя средства с вашего баланса любым другим способом, вы принимаете полную ответственность за ваши действия.
+            <br /> 6.3 Сервис не призывает и не мотивирует увеличить ваши средства.
+            <br /> 6.3 Сервис не дает 100% гарантии, что открытие кейсов даст возможность увеличить ваши средства на балансе.
+            <br /> 6.4 Сервис ни в коем случае не обязывает и не заставляет совершать тех или иных действий. Все действия, совершенные вами в Сервисе, осуществляются исключительно под вашу ответственность.
+            <br /> 6.5 Данное пользовательское соглашение размещено на сайте опкеш точка вип. Если же это не так, значит мы украли тупо текст и даже не удосужились прочитать его. Вот такие мы идиоты.
+            <br />
+            <h3>7. ПРИНЯТИЕ УСЛОВИЙ СОГЛАШЕНИЯ (АКЦЕНТ ОФЕРТЫ)</h3> 7.1 Используя и/или посещая любые разделы Сервисом, Вы соглашаетесь принять и соблюдать условия настоящего Соглашения и Вы соответственно a) соглашаетесь использовать средства электронной коммуникации для заключения договоров; b) Вы также отказываетесь от любых применимых в данном случае прав или требований, для которых необходима собственноручная подпись, в той степени, в которой это допускается любым применимым законодательным.
+            <br /> 7.2 Если Вы не согласны принять и далее следовать условия настоящего Соглашения, пожалуйста, не регистрируйте аккаунт и/или прекратите использовать Ваш аккаунт. Дальнейшее использование Сервиса будет рассматриваться как Ваше согласие с условиями настоящего Соглашение, которые, как мы Вас уведомили, могут периодически применяться положением.
+            <h3>8. ПРАВА</h3> 8.1. Исключительное право на Сервис принадлежит Сервису
+            <br /> 8.2. Все права на материалы, представленные на нашем сайте, принадлежат Правообладателям</div>
+    </div>
+
+
+    <div class="verifyUI">
+        <a href="#close" class="sb-close-btn">
+            <div class="close-icon eas"></div>
+        </a>
+        <div class="title">Verify Ticket</div>
+        <div class="desc big">Hash = sha256(sha256(number-server_seed-return_seed))</div>
+        <div class="text">
+            <div class="list hash">
+                <div class="name">Hash</div>
+                <div class="value">
+                    <input type="text" readonly>
+                </div>
+            </div>
+            <div class="list number">
+                <div class="name">Number</div>
+                <div class="value">
+                    <input type="text" readonly>
+                </div>
+            </div>
+            <div class="list server">
+                <div class="name">Server Seed</div>
+                <div class="value">
+                    <input type="text" readonly>
+                </div>
+            </div>
+            <div class="list return">
+                <div class="name">Return Seed</div>
+                <div class="value">
+                    <input type="text" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="desc">Return Seed the winning column (right position)</div>
+    </div>
+    <div class="messageUI">
+        <a href="#close" class="sb-close-btn">
+            <div class="close-icon eas"></div>
+        </a>
+        <div class="title">Warning</div>
+        <div class="text"></div>
+        <div class="submit">
+            <button onclick="$('.sb-close-btn').trigger('click');">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+
+              var conf_vars = {
+                  'deposit-min': 50.00,
+                  'free-money': 1.00,
+                  'deposit-max': 10000.00,
+                  'real-balance': 0.,
+                  'logged-id': '1192104',
+                  'user-token': 'qsom3o5ga8oo69vcu0tr99t4l2',
+                  'game-open': 0,
+                  'min-bet': 5.00
+              };
+              var lang_conf = {
+                'free-denied':'Кран доступен, только если ваш баланс менее <span>1.00 ₽.</span>',
+                'deposit-min-err':'Вы указали меньше чем минимальный депозит',
+                'deposit-max-err':'Вы указали больше чем минимальный депозит',
+                'deposit-method-err':'Выбранная Вами платежная система не действует',
+                'enough-money':'Недостаточна средств на счету',
+                'wallet-empty':'Необходимо вписать номер кошелька',
+                'withdrawal-success':'Деньги успешно списаны со счета, дождитесь пополнение кошелька',
+                'free_denied2':'Сегодня вы уже воспользовались один раз!',
+                'free_ok':'Деньги начислены на Ваш баланс!',
+                'game_not_found':'Ставок нет',
+              'game-take':'Взять #amount# <i class="flaticon-ruble"></i>',
+                'with-min': 'Withdraw minimum is 50 rub!',
+                'game-end':'Завершить'
+              };
+              var game_passed = '-1:-1:-1,-1:-1:-1,-1:-1:-1,-1:-1:-1,-1:-1:-1,-1:-1:-1,-1:-1:-1,-1:-1:-1,-1:-1:-1,-1:-1:-1';
+              var game_bet_amount = 0.00;
+              var game_bet_take = 0.00;
+              var click_sound = ss_soundbits("/assets/audio/click.mp3");
+              var lost_sound = ss_soundbits("/assets/audio/lost.mp3");
+              var win_sound = ss_soundbits("/assets/audio/win.mp3");
+
+              $(document).ready(function() {
+                  $('.game-pane-load').hide();
+              });
+    </script>
+    <script src="//ulogin.ru/js/ulogin.js"></script>
+    <div style="display: none;">
+      <div class="modal modal1" id="paymentModal">
+  		<div style="    background: #272d43;
+    height: 480px;">
+  			<div class="header-modal"><h2>Депозит</h2><a href="#" class="close arcticmodal-close"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+  			<div class="body-modal">
+  				<div class="sidebar-pay">
+  					<ul>
+  						<li class="active" data-value="yandex">Яндекс. Деньги</li>
+  						<li data-value="qiwi">QIWI Wallet</li>
+  						<li data-value="webmoney">WebMoney</li>
+  						<li data-value="bee">Билайн</li>
+  						<li data-value="mega">Мегафон</li>
+  						<li data-value="mts">МТС</li>
+  						<li data-value="tele2">ТЕЛЕ2</li>
+  						<li data-value="visa">Visa, MasterCard</li>
+  						<li data-value="skin" style="display:none">SkinPay</li>
+  						<li data-value="free">FreeKassa</li>
+  					</ul>
+  				</div>
+  				<div class="box-pay">
+  					<form method="post" action="/pay">
+  						<div class="top">
+  							<h3>Яндекс. Деньги</h3>
+  							<input type="number" name="sum" value="50"></input>
+  							<input type="hidden" name="payment_system" value="45"/>
+  							<div class="price">
+  								<a href="#" data-value="50">50</a>  <a href="#" data-value="100">100</a>   <a href="#" data-value="500">500</a>   <a href="#" data-value="1000">1000</a>   <a href="#" data-value="2000">2000</a>   <a href="#" data-value="3000">3000</a>
+  							</div>
+  						</div>
+  						<div class="center">
+  							<div class="inform">
+  								<h4>Информация</h4>
+  								<p>Минимальная сумма к пополнению: <strong>50</strong></p>
+  								<p>Максимальная сумма к пополнению: <strong>10000</strong></p>
+  							</div>
+  						</div>
+  						<div class="bottom">
+  							<button type="submit">Оплатить</button>
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  			<div class="clearfix"></div>
+  		</div>
+  	</div>
+  </div>
+  <div style="display: none;">
+	<div class="modal modal3" id="withdrawModal">
+		<div style="height: 460px;">
+			<div class="header-modal"><h2>Вывод средств</h2><a href="#" class="close arcticmodal-close"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+			<div class="body-modal">
+				<div class="sidebar-pay">
+					<ul>
+						<li class="active" data-value="yandex">Яндекс. Деньги</li>
+						<li data-value="qiwi">QIWI Wallet</li>
+						<li data-value="webmoney">WebMoney</li>
+					</ul>
+				</div>
+				<div class="box-pay">
+					<div class="top">
+						<h3>Яндекс. Деньги</h3>
+						<input type="number" name="sum" value="100"></input>
+						<input type="hidden" name="payment_system" value="45"/>
+					</div>
+					<div class="center">
+						<div class="refill">
+							<input type="text" placeholder="Введите свой кошелек" name="wallet"/>
+							<p>Минимальная сумма к выводу: <strong>100 р.</strong></p>
+							<p class="white"><strong>Внимание:</strong> вывод осуществляется в течении <strong>48 часов.</strong></p>
+						</div>
+					</div>
+					<div class="bottom">
+						<button class="withdraw">Подать заявку</button>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+
+<div style="display: none;">
+<div class="modal modal5" id="prof">
+  <div style="
+    height: 610px;
+">
+    <div class="header-modal"><h2>Профиль</h2></div>
+    <div class="body-modal" style="background: #272d43;">
+      <div class="nav" style="    margin-top: 10px;">
+        <ul>
+          <li class="active"><a href="#">ИНФОРМАЦИЯ</a></li>
+          <li><a href="#">БОНУСЫ</a></li>
+          <li><a href="#">Операции</a></li>
+          <li><a href="#">РЕФЕРАЛЫ</a></li>
+          <li><a href="#">СКОРО</a></li>
+        </ul>
+      </div>
+      <div class="profile tab tab1 active">
+        <h4>Добро пожаловать, <a href="#">Сафонов Дима</a></h4>
+        <div class="left">
+          <label>Никнейм:</label>
+          <input type="text" placeholder="Сафонов Дима" readonly/>
+          <div class="stat">
+            <strong>ИГР СЫГРАНО</strong>
+            <span>28</span>
+          </div>
+        </div>
+        <div class="center">
+                    <div class="img"><img src="/assets/images/prof.png" alt="...."/></div>
+          <span class="rang">Ваш ранг: <strong>Новичок</strong></span>
+                                                                                        </div>
+        <div class="right">
+          <label>Эл. адрес:</label>
+          <input type="text" placeholder="" readonly/>
+          <div class="stat">
+            <strong>ПОСТАВЛЕНО руб</strong>
+            <span>140</span>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="footer-modal">
+          <a href="/logout" style="
+        margin-top: 20px;
+        width: 35%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    ">Выйти</a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="bonuses tab tab2">
+        <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+            <th></th>
+            <th></th>
+            <th style="text-align:center;">БОНУСЫ СКОРО ПОЯВЯТСЯ</th>
+            <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+         </table>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+      <div class="operations tab tab3">
+        <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+            <th>№</th>
+            <th>Транзикация</th>
+            <th>Сумма</th>
+            <th>Дата</th>
+            <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+		              
+            			            
+                      </tbody>
+         </table>
+         </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="operations tab tab4">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+            <th></th>
+            <th></th>
+            <th style="text-align:center;">СКОРО ПОЯВИТСЯ</th>
+            <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+         </table>
+         </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="referrals tab tab5">
+        <h4>ПРИГЛАСИТЕ ДРУЗЕЙ И ЗАРАБАТЫВАЙТЕ ДЕНЬГИ</h4>
+        <div class="left">
+          <h3>ПРОЦЕНТ ОТ ДЕПОЗИТА До: <span>5%</span></h3>
+          <ul>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i> Количество игроков, которых Вы привлекли: <span>0</span></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i> Всего выплачено вам: <span>0 р.</span></li>
+          </ul>
+          <h3>ВЫПЛАТЫ ПО УРОВНЯМ</h3>
+          <ul>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i> Уровень 1: <span>3%</span></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i> Уровень 2: <span>4%</span></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i> Уровень 3: <span>5%</span></li>
+          </ul>
+        </div>
+        <div class="right">
+          <label>Ваша реф. ссылка:</label>
+          <input type="text" value="http://jetcash.space?r=HneBzY3Kf5f3z" readonly />
+          <p>До <strong>5%</strong> от каждого депозита, сделанного игроками, которых Вы привлекли, добавляется к вашему балансу и вы сразу же сможете его вывести.</p>
+          <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter" data-url="http://jetcash.ru?r=HneBzY3Kf5f3z"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43954534 = new Ya.Metrika({ id:43954534, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true, ut:"noindex", ecommerce:"dataLayer" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>
